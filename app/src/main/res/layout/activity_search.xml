@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000"
+    android:background="@color/colorPrimaryDark"
     tools:context=".search">
 
     <androidx.cardview.widget.CardView
@@ -17,15 +17,18 @@
             android:layout_width="34dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_baseline_search_24"
-            android:layout_marginLeft="360dp"
+            android:layout_marginLeft="364dp"
             android:onClick="searchit"/>
         <EditText
-            android:layout_width="300dp"
+            android:layout_width="346dp"
             android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="8dp"
+            android:hint="Search for your Favorite Movie"
+            android:textColorHint="#838383"
+            android:layout_marginLeft="8dp"
             android:id="@+id/searchbox"
-            android:background="#FFFFFF"/>
+            android:background="@color/colorPrimaryDark"/>
 
 
 
@@ -34,6 +37,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_margin="16dp"
         android:id="@+id/searchrecycle"/>
 </LinearLayout>

@@ -4,32 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#000000">
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
-            android:background="#000"
+            android:layout_marginTop="8dp"
+            android:textSize="24sp"
             android:fontFamily="@font/roboto_bold"
-            android:hint="Search"
-            android:textColor="#F30B0B"
-            android:textSize="24sp" />
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name">
+        </TextView>
         <ImageView
-            android:layout_width="35dp"
-            android:layout_height="match_parent"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
             android:src="@drawable/ic_baseline_search_24"
-            android:layout_marginLeft="370dp"
-            android:layout_marginTop="5dp"
+            android:layout_gravity="end"
             android:onClick="search"/>
-
     </androidx.cardview.widget.CardView>
 
 
@@ -42,6 +45,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorSecond"
             android:orientation="vertical" >
 
 
@@ -57,12 +61,13 @@
                 android:textSize="24sp" />
 
             <androidx.viewpager2.widget.ViewPager2
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
                 android:id="@+id/recycletrending"
+                android:layout_width="match_parent"
                 android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDark"
                 android:paddingStart="80dp"
-                android:paddingEnd="80dp"/>
+                android:paddingEnd="80dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -77,6 +82,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="215dp"
+                android:background="@color/colorPrimaryDark"
                 android:layout_marginTop="10dp"
                 android:id="@+id/nowplayingrecycle"/>
 
@@ -94,6 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="215dp"
                 android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDark"
                 android:id="@+id/trendingrecycle"/>
 
             <TextView
@@ -110,6 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="215dp"
                 android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDark"
                 android:id="@+id/topratedgrecycle"/>
 
             <TextView
@@ -125,6 +133,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="215dp"
+                android:background="@color/colorPrimaryDark"
                 android:layout_marginTop="10dp"
                 android:id="@+id/upcomingrecycle"/>
 
