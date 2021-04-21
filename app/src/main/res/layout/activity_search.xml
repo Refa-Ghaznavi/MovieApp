@@ -5,39 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorSecond"
     tools:context=".search">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="53dp"
         app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="#070707">
-        <ImageView
-            android:layout_width="34dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_baseline_search_24"
-            android:layout_marginLeft="364dp"
-            android:onClick="searchit"/>
+        app:cardBackgroundColor="@color/colorSecond">
+
         <EditText
             android:layout_width="346dp"
             android:layout_height="40dp"
             android:layout_marginTop="8dp"
             android:paddingLeft="8dp"
+            android:lines="1"
             android:hint="Search for your Favorite Movie"
-            android:textColorHint="#838383"
+            android:textColorHint="#7C7474"
+            android:layout_gravity="left"
+            android:background="@color/colorSecond"
             android:layout_marginLeft="8dp"
-            android:id="@+id/searchbox"
-            android:background="@color/colorPrimaryDark"/>
+            android:id="@+id/searchbox"/>
 
-
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:onClick="searchit"/>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark"
-        android:layout_margin="16dp"
+        tools:listitem="@layout/moviecard"
+        android:layout_margin="8dp"
+        android:padding="8dp"
         android:id="@+id/searchrecycle"/>
 </LinearLayout>

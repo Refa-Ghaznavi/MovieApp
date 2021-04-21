@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/colorSecond"
     android:orientation="vertical">
 
     <TextView
@@ -12,16 +12,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
-        android:gravity="left"
-        android:layout_margin="8dp"
-        android:text="topic"
+        android:text="Topic"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@color/colorPrimaryDark"
         android:textColor="@color/colorPrimary"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fullmovierecycle"
         android:layout_width="match_parent"
+        tools:listitem="@layout/moviecard"
+        android:layout_margin="8dp"
         android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorPrimaryDark"/>
+        android:padding="8dp"
+        android:background="@color/colorSecond"/>
 </LinearLayout>
