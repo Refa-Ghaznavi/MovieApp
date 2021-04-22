@@ -3,22 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/colorSecond"
     tools:context=".moviedetails">
-
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-       >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="vertical">
-
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card"
@@ -42,9 +38,9 @@
                 android:id="@+id/moviename"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto_bold"
+                android:layout_gravity="center_horizontal"
                 android:gravity="center"
                 android:text="movie name"
                 android:textColor="#FBFBFB"
@@ -75,7 +71,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_marginRight="24dp"
                 android:layout_marginTop="-45dp"
                 android:text="RATE"
                 android:textColor="@color/colorPrimary"
@@ -87,7 +82,6 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:layout_marginRight="26dp"
                 android:text="8.6"
                 android:textColor="#F8F8F8" />
 
@@ -123,7 +117,7 @@
                 android:id="@+id/moviedate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="54dp"
+                android:layout_marginLeft="36dp"
                 android:layout_marginTop="5dp"
                 android:textColor="#FFFFFF" />
 
@@ -137,10 +131,11 @@
                 android:textColor="@color/colorPrimary" />
             <TextView
                 android:id="@+id/movieover"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="6dp"
                 android:text="super/"
                 android:textColor="#FFFFFF" />
 
@@ -160,9 +155,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/similarrecycle"
                 android:layout_width="match_parent"
-                android:layout_margin="8dp"
-                android:padding="8dp"
-                android:layout_height="215dp"
+                tools:listitem="@layout/moviecard"
+                android:layout_height="wrap_content"
                 android:background="@color/colorSecond" />
 
         </LinearLayout>

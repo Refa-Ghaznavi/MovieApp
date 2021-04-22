@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:background="@color/colorSecond"
     android:orientation="vertical">
-
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/topic"
         android:layout_width="match_parent"
@@ -20,11 +22,35 @@
         android:textSize="24sp" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/topic"
         android:id="@+id/fullmovierecycle"
         android:layout_width="match_parent"
         tools:listitem="@layout/moviecard"
-        android:layout_margin="8dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_vertical"
         android:layout_height="match_parent"
-        android:padding="8dp"
         android:background="@color/colorSecond"/>
+
+    <RelativeLayout
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/yellow_circle"
+        android:elevation="8dp"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
 </LinearLayout>

@@ -3,6 +3,8 @@ package com.example.movieapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +32,7 @@ public class moviefullliste extends AppCompatActivity {
     RecyclerView recycle;
     int page;
     List<trendmoviedata> list ;
+    RelativeLayout progressbar;
 
     TextView moviestopic;
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class moviefullliste extends AppCompatActivity {
         setContentView(R.layout.fullmovielistlayout);
         list= new ArrayList<>();
         moviestopic=findViewById(R.id.topic);
+        progressbar=findViewById(R.id.progress_bar);
       // Intent intent=getIntent();
       //  String url=intent.getExtras().getString("url");
         Bundle bundle = getIntent().getExtras();
@@ -61,10 +65,11 @@ public class moviefullliste extends AppCompatActivity {
 
         //fetch data
         public  void fetchdata(String url){
+
         StringRequest requestnp = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-
+                progressbar.setVisibility(View.GONE);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                      page=jsonObject.getInt("total_pages");
@@ -90,10 +95,12 @@ public class moviefullliste extends AppCompatActivity {
                             trendmoviedata = new trendmoviedata(title, date, lang, poster, overview, count, rate, id, adult);
                             list.add(trendmoviedata);
 
+
                     }
 
 
                 } catch (JSONException e) {
+                    progressbar.setVisibility(View.GONE);
                     e.printStackTrace();
 
                 }
@@ -103,7 +110,7 @@ public class moviefullliste extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                progressbar.setVisibility(View.GONE);
                 Toast.makeText(moviefullliste.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

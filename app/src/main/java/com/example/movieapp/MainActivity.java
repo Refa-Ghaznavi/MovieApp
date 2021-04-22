@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     public void npmovies(View view){
 
         Intent intent = new Intent(this,moviefullliste.class);
-        intent.putExtra("title","NowPlaying Movie");
+        intent.putExtra("title","Now Playing Movie");
         intent.putExtra("url","https://api.themoviedb.org/3/movie/now_playing?api_key=d3bf2aee718b2374edaa0b9a3b477cf2&language=en-US&page=1");
         startActivity(intent);
 
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     public void upcomingmovies(View view){
 
         Intent intent = new Intent(this,moviefullliste.class);
-        intent.putExtra("title","upcoming Movie");
+        intent.putExtra("title","Upcoming Movie");
         intent.putExtra("url","https://api.themoviedb.org/3/movie/upcoming?api_key=d3bf2aee718b2374edaa0b9a3b477cf2&language=en-US&page=1");
         startActivity(intent);
 

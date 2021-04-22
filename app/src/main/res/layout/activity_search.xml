@@ -20,6 +20,8 @@
             android:layout_marginTop="8dp"
             android:paddingLeft="8dp"
             android:lines="1"
+            android:maxLines="1"
+            android:textColor="#FFFFFF"
             android:hint="Search for your Favorite Movie"
             android:textColorHint="#7C7474"
             android:layout_gravity="left"
@@ -41,7 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/moviecard"
-        android:layout_margin="8dp"
-        android:padding="8dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_vertical"
         android:id="@+id/searchrecycle"/>
 </LinearLayout>
